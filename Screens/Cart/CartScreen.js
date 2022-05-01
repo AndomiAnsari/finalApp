@@ -58,14 +58,7 @@ const CartScreen = props => {
           </Text>
           <Button
 
-            onPress={deleteCartItem} title="Delete Cart Item" style={{
-              height: 30,
-              width: 100,
-              backgroundColor: 'red',
-              borderRadius: 10,
-              justifyContent: 'center',
-              alignItems: 'center',
-            }} />
+            onPress={deleteCartItem} title="Delete Cart Item" />
         </View>
 
         <View style={{ height: '90%', width: '10%' }}></View>

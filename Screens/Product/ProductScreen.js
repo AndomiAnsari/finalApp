@@ -54,7 +54,8 @@ const HomeScreen = props => {
               };
 
               return (
-                <View
+                <TouchableOpacity
+                  onPress={() => props.navigation.navigate('ProductDetail')}
                   style={{
                     // height: 200,
                     // width: '48%',
@@ -185,7 +186,7 @@ const HomeScreen = props => {
                       </Text>
                     </TouchableOpacity> */}
                   </View>
-                </View>
+                </TouchableOpacity>
               );
             }}
           />

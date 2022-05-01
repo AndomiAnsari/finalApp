@@ -10,6 +10,7 @@ import CartScreen from '../Screens/Cart/CartScreen';
 import ProductScreen from '../Screens/Product/ProductScreen';
 import SearchScreen from '../Screens/Product/SearchScreen';
 import ProfileScreen from '../Screens/Product/ProfileScreen';
+import ProductDetailScreen from '../Screens/Product/ProductDetailScreen';
 import Colors from '../Constants/Colors';
 
 const Stack = createStackNavigator();
@@ -19,6 +20,7 @@ const Productnavigator = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Product Screen" component={ProductScreen} />
+      <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
     </Stack.Navigator>
   );
 };
