@@ -7,6 +7,8 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import ProductReducer from './Store/Reducers/ProductReducer';
+import { userContext } from './Components/userContext';
+
 const App = () => {
 
   const rootReducer = combineReducers({

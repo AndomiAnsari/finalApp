@@ -11,9 +11,9 @@ const HomeScreen = props => {
   const dispatch = useDispatch();
 
   const imageArray = [
-    'https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg',
-    'http://wowslider.com/sliders/demo-18/data1/images/hongkong1081704.jpg',
-    'https://wowslider.com/sliders/demo-18/data1/images/shanghai.jpg',
+    'https://cdn.pixabay.com/photo/2018/08/08/16/17/shoes-3592530__340.jpg',
+    'https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082__340.jpg',
+    'https://cdn.pixabay.com/photo/2016/01/26/21/57/wedding-rings-1163321__340.jpg',
   ];
 
   return (
@@ -134,6 +134,7 @@ const HomeScreen = props => {
             width: '97%',
             marginVertical: 5,
           }}>
+
           <FlatList
             showsVerticalScrollIndicator={false}
             data={allProduct}
@@ -147,7 +148,7 @@ const HomeScreen = props => {
               return (
                 <View
                   style={{
-                    height: 200,
+                    height: 250,
                     width: '48%',
                     backgroundColor: 'white',
                     margin: 5,
@@ -163,17 +164,20 @@ const HomeScreen = props => {
                     justifyContent: 'center',
                     alignItems: 'center',
                   }}>
+
                   <TouchableOpacity style={{ height: '60%', width: '100%' }}>
                     <Image
                       style={{
-                        height: '100%',
+                        marginTop: 20,
+                        height: '80%',
                         width: '100%',
                         resizeMode: 'contain',
                       }}
                       source={{ uri: itemData.item.thumbNail }}
                     />
                   </TouchableOpacity>
-
+                  <Text style={{ margin: 'auto', width: '90%', fontSize: 13, fontWeight: '400', color: 'black' }}>
+                    {itemData.item.name}</Text>
                   <View
                     style={{
                       height: '10%',

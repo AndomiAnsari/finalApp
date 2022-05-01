@@ -21,10 +21,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { SliderBox } from 'react-native-image-slider-box';
 import Colors from '../../Constants/Colors';
 import * as CartAction from '../../Store/Action/ProductAction';
-const HomeScreen = props => {
+
+const ProductScreen = props => {
   const allCategories = useSelector(state => state.product.allCategories);
   const allProduct = useSelector(state => state.product.allPrroduct);
   const dispatch = useDispatch();
+
 
 
 
@@ -55,7 +57,10 @@ const HomeScreen = props => {
 
               return (
                 <TouchableOpacity
-                  onPress={() => props.navigation.navigate('ProductDetail')}
+                  onPress={() => props.navigation.navigate('ProductDetail', {
+                    product: itemData.item
+                  })}
+                  // test="test"
                   style={{
                     // height: 200,
                     // width: '48%',
@@ -72,7 +77,7 @@ const HomeScreen = props => {
                     // elevation: 1,
                     // justifyContent: 'center',
                     // alignItems: 'center',
-                    height: 100,
+                    height: 120,
                     width: '100%',
                     marginVertical: 10,
                     borderBottomColor: 'lightgray',
@@ -112,6 +117,8 @@ const HomeScreen = props => {
                     }}>
                     <Text style={{ width: '100%', fontSize: 13, fontWeight: '600', color: 'black' }}>
                       {itemData.item.name}</Text>
+                    <Text style={{ width: '100%', fontSize: 13, fontWeight: '600', color: 'black' }}>
+                      Rs {itemData.item.price}</Text>
                     <Text
                       style={{ fontSize: 13, fontWeight: 'bold', color: Colors.primary }}>
                       {itemData.item.priceUnit}
@@ -122,7 +129,7 @@ const HomeScreen = props => {
 
                   </View>
                   <TouchableOpacity
-
+                    onPress={addToCartHandler}
                     style={{
                       height: 30,
                       width: 100,
@@ -195,4 +202,4 @@ const HomeScreen = props => {
     </View>
   );
 };
-export default HomeScreen;
+export default ProductScreen;

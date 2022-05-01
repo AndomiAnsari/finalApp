@@ -32,6 +32,7 @@ const MainHeader = props => {
       </TouchableOpacity> */}
       <TouchableOpacity
         onPress={props.onBack}
+
         style={{
           height: '100%',
           width: '15%',
@@ -40,6 +41,7 @@ const MainHeader = props => {
           alignItems: 'center',
           flexDirection: 'row',
         }}>
+
         <MaIcon iconName="arrow-left" />
 
       </TouchableOpacity>
