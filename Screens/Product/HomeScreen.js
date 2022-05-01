@@ -195,11 +195,11 @@ const HomeScreen = props => {
 
                   <View
                     style={{
-                      height: '20%',
+                      height: '1%',
                       width: '100%',
                       justifyContent: 'center',
                       alignItems: 'center',
-                      marginTop: 5,
+                      marginBottom: 30,
                     }}>
                     <TouchableOpacity
                       onPress={addToCartHandler}
